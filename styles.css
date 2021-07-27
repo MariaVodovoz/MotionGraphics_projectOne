@@ -1,0 +1,232 @@
+* {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+}
+/*  Grid layout */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "alarm chocolate sandwich"
+    "headphones apps watches"
+    ". . .";
+}
+/* Style for text */
+#text {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  font-size: 50px;
+}
+/* Grid layout markers */
+.alarm {
+  grid-area: alarm;
+}
+
+.chocolate {
+  grid-area: chocolate;
+}
+
+.sandwich {
+  grid-area: sandwich;
+}
+
+.headphones {
+  grid-area: headphones;
+}
+
+.apps {
+  grid-area: apps;
+}
+
+.watches {
+  grid-area: watches;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Toggles  */
+#button-alarm {
+  position: relative;
+  display: block;
+  width: 700px;
+  height: 350px;
+  background-color: rgb(160, 213, 228);
+  border-radius: 350px;
+  cursor: pointer;
+  transform: scale(0.4);
+  margin: 50px auto;
+}
+#button-chocolate {
+  position: relative;
+  display: block;
+  width: 700px;
+  height: 350px;
+  background-color: rgb(166, 228, 160);
+  border-radius: 350px;
+  cursor: pointer;
+  transform: scale(0.4);
+  margin: 50px auto;
+}
+#button-sandwich {
+  position: relative;
+  display: block;
+  width: 700px;
+  height: 350px;
+  background-color: rgb(172, 160, 228);
+  border-radius: 350px;
+  cursor: pointer;
+  transform: scale(0.4);
+  margin: 50px auto;
+}
+#button-headphones {
+  position: relative;
+  display: block;
+  width: 700px;
+  height: 350px;
+  background-color: rgb(228, 210, 160);
+  border-radius: 350px;
+  cursor: pointer;
+  transform: scale(0.4);
+  margin: 50px auto;
+}
+#button-apps {
+  position: relative;
+  display: block;
+  width: 700px;
+  height: 350px;
+  background-color: rgb(228, 160, 186);
+  border-radius: 350px;
+  cursor: pointer;
+  transform: scale(0.4);
+  margin: 50px auto;
+}
+#button-watches {
+  position: relative;
+  display: block;
+  width: 700px;
+  height: 350px;
+  background-color: rgb(216, 228, 160);
+  border-radius: 350px;
+  cursor: pointer;
+  transform: scale(0.4);
+  margin: 50px auto;
+}
+
+/* Knobs */
+
+#knob-alarm {
+  width: 290px;
+  height: 290px;
+  background-image: url(img/alarm.png);
+  background-size: 700px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  border-radius: 290px;
+  transition: 0.4s ease left, 0.4s ease background-position;
+  z-index: 2;
+}
+
+#knob-chocolate {
+  width: 290px;
+  height: 290px;
+  background-image: url(img/chocolate.png);
+  background-size: 700px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  border-radius: 290px;
+  transition: 0.4s ease left, 0.4s ease background-position;
+  z-index: 2;
+}
+
+#knob-sandwich {
+  width: 290px;
+  height: 290px;
+  background-image: url(img/sandwich.png);
+  background-size: 700px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  border-radius: 290px;
+  transition: 0.4s ease left, 0.4s ease background-position;
+  z-index: 2;
+}
+
+#knob-headphones {
+  width: 290px;
+  height: 290px;
+  background-image: url(img/headphones.png);
+  background-size: 700px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  border-radius: 290px;
+  transition: 0.4s ease left, 0.4s ease background-position;
+  z-index: 2;
+}
+
+#knob-apps {
+  width: 290px;
+  height: 290px;
+  background-image: url(img/apps.png);
+  background-size: 700px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  border-radius: 290px;
+  transition: 0.4s ease left, 0.4s ease background-position;
+  z-index: 2;
+}
+
+#knob-watches {
+  width: 290px;
+  height: 290px;
+  background-image: url(img/watches.png);
+  background-size: 700px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  border-radius: 290px;
+  transition: 0.4s ease left, 0.4s ease background-position;
+  z-index: 2;
+}
+
+/* The switch actions */
+
+#alarm-checkbox:checked + #button-alarm #knob-alarm {
+  left: 380px;
+  background-position: -350px 0;
+}
+
+#chocolate-checkbox:checked + #button-chocolate #knob-chocolate {
+  left: 380px;
+  background-position: -350px 0;
+}
+
+#sandwich-checkbox:checked + #button-sandwich #knob-sandwich {
+  left: 380px;
+  background-position: -350px 0;
+}
+#headphones-checkbox:checked + #button-headphones #knob-headphones {
+  left: 380px;
+  background-position: -350px 0;
+}
+#apps-checkbox:checked + #button-apps #knob-apps {
+  left: 380px;
+  background-position: -350px 0;
+}
+#watches-checkbox:checked + #button-watches #knob-watches {
+  left: 380px;
+  background-position: -350px 0;
+}
